@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign In – CyberDen</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="logo">CyberDen</div>
+    <div class="contact-info">
+      <i class="fas fa-map-marker-alt"></i> 3 Moya Street, Jhb
+      <i class="fas fa-phone" style="margin-left:25px;"></i> 082 407 6327
+    </div>
+    <div class="auth">
+      <a href="login.html" class="active">Login</a>
+      <a href="register.html">Sign Up</a>
+    </div>
+  </div>
+
+  <!-- Navigation (optional – you can hide it on login page if you want) -->
+  <nav style="background:rgba(17,34,64,0.98);">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="blogs.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Login Form Section -->
+  <div class="login-container">
+    <div class="login-box">
+      <div class="login-header">
+        <h1>Welcome Back!</h1>
+        <p>Log in to book PCs faster, view your hours & join tournaments</p>
+      </div>
+
+      <form id="login-form">
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" id="login-username" placeholder="Username or Email" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="login-password" placeholder="Password" required>
+        </div>
+
+        <div class="options">
+          <label><input type="checkbox"> Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn login-btn">Sign In</button>
+      </form>
+
+      <div class="divider">or continue with</div>
+
+      <div class="social-login">
+        <button class="social-btn google"><i class="fab fa-google"></i> Google</button>
+        <button class="social-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+      </div>
+
+      <p class="signup-link">
+        Don’t have an account? <a href="register.html"><strong>Sign up free</strong></a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer style="margin-top:auto;">
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-discord"></i></a>
+    </div>
+    <p>© 2025 CyberDen • 3 Moya Street, Johannesburg • Open 24/7</p>
+  </footer>
+
+</body>
+</html>

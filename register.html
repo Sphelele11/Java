@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up – CyberDen</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="register.css"/>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="logo">CyberDen</div>
+    <div class="contact-info">
+      <i class="fas fa-map-marker-alt"></i> 3 Moya Street, Jhb
+      <i class="fas fa-phone" style="margin-left:25px;"></i> 082 407 6327
+    </div>
+    <div class="auth">
+      <a href="login.html">Login</a>
+      <a href="register.html" class="active">Sign Up</a>
+    </div>
+  </div>
+
+  <!-- Register Form Section -->
+  <div class="register-container">
+    <div class="register-box">
+      <div class="register-header">
+        <h1>Join the Den</h1>
+        <p>Create your free account in 30 seconds and start booking PCs instantly!</p>
+      </div>
+
+      <form id="register-form">
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" id="fullname" placeholder="Full Name" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="reg-email" placeholder="Email Address" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-phone"></i>
+          <input type="tel" id="phone" placeholder="Phone / WhatsApp Number" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-gamepad"></i>
+          <input type="text" id="username" placeholder="Username (for tournaments)" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="reg-password" placeholder="Password" required minlength="6">
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+        </div>
+
+        <label class="checkbox-container">
+          <input type="checkbox" required>
+          <span class="checkmark"></span>
+          I agree to the <a href="#" style="color:var(--primary);">Terms & Conditions</a>
+        </label>
+
+        <button type="submit" class="btn register-btn">
+          Create Free Account
+        </button>
+      </form>
+
+      <div class="divider">or sign up with</div>
+
+      <div class="social-register">
+        <button class="social-btn google"><i class="fab fa-google"></i> Google</button>
+        <button class="social-btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+      </div>
+
+      <p class="login-link">
+        Already have an account? <a href="login.html"><strong>Sign in here</strong></a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="socials">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-discord"></i></a>
+    </div>
+    <p>© 2025 CyberDen • 3 Moya Street, Johannesburg • Open 24/7</p>
+  </footer>
+
+</body>
+</html>
