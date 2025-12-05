@@ -7,6 +7,7 @@
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
  <link rel="stylesheet" href="style.css"/>
  <link rel="stylesheet" href="contact.css"/>
+
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
@@ -17,7 +18,44 @@
            });
           })();
         </script>
+
  </script>
+
+ <!-- EmailJS SDK + Your Script -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS with your Public Key (User ID)
+  (function(){
+    emailjs.init("wJC2EV4sGDqUy4pq-"); // Replace with your actual EmailJS Public Key
+  })();
+
+  // Form Submit Handler
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevent page reload
+
+    // Show loading state
+    const btn = document.querySelector(".submit-btn");
+    const originalText = btn.innerHTML;
+    btn.innerHTML = "Sending...";
+    btn.disabled = true;
+
+    // Send email
+    emailjs.sendForm("service_xn2dyqt", "template_gkpsxs6", this)
+      .then(() => {
+        alert("Message sent successfully! We'll reply soon");
+        document.getElementById("contact-form").reset();
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+      })
+      .catch((error) => {
+        console.error("EmailJS error:", error);
+        alert("Failed to send message. Try WhatsApp instead!");
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+      });
+  });
+</script>
+ <script src="script.js"></script>
 </head>
 <body>
 
@@ -75,20 +113,22 @@
         </div>
       </div>
 
-      <!-- Contact Form -->
-      <div class="form-wrapper">
-        <h2>Send Us a Message</h2>
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <div class="form-grid">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="text" name="subject" placeholder="Subject" required>
-            <input type="tel" name="phone" placeholder="Phone (optional)">
-          </div>
-          <textarea name="message" rows="8" placeholder="Your Message..." required></textarea>
-          <button type="submit" class="btn submit-btn">Send Message</button>
-        </form>
-      </div>
+     <!-- Contact Form with EmailJS -->
+<div class="form-wrapper">
+  <h2>Send Us a Message</h2>
+  <form id="contact-form">
+    <div class="form-grid">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <input type="text" id="subject" name="subject" placeholder="Subject" required>
+      <input type="tel" id="phone" name="phone" placeholder="Phone (optional)">
+    </div>
+    <textarea id="message" name="message" rows="8" placeholder="Your Message..." required></textarea>
+    <button type="button" onclick="SendMail()" class="btn submit-btn">
+  Send Message
+</button>
+  </form>
+</div>
 
       <!-- Google Maps Embed -->
       <div class="map-wrapper">
