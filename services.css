@@ -1,0 +1,82 @@
+/* Services Page Specific Styles */
+.page-hero {
+  background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)),
+              url('images/landingImage.png') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: 4.8rem;
+  color: var(--primary);
+  text-shadow: 0 0 40px rgba(0,212,255,0.8);
+}
+
+.container {
+  padding: 100px 5% 120px;
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.section { margin-bottom: 110px; }
+.section h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 70px;
+  color: var(--primary);
+}
+
+.pricing-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.price-card {
+  background: var(--dark);
+  border: 2px solid #1e3a5f;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.4s;
+}
+
+.price-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-15px);
+  box-shadow: 0 25px 50px rgba(0,212,255,0.25);
+}
+
+.price-card.popular {
+  border-color: var(--primary);
+  transform: scale(1.05);
+}
+
+.price-card h3 { font-size: 2rem; margin: 20px 0; }
+.price { font-size: 3.8rem; font-weight: bold; color: var(--primary); }
+.price span { font-size: 1rem; color: #888; }
+
+.features { list-style: none; text-align: left; margin: 30px 0; }
+.features li { padding: 10px 0; font-size: 1.1rem; }
+.features i { color: var(--primary); margin-right: 12px; }
+
+.cta-center { text-align: center; margin: 100px 0 50px; }
+
+.whatsapp-btn {
+  font-size: 1.5rem !important;
+  padding: 20px 60px !important;
+  background: #25D366;
+  color: white !important;
+}
+
+.whatsapp-btn i { margin-right: 15px; font-size: 2rem; vertical-align: middle; }
+
+@media (max-width: 768px) {
+  .page-hero h1 { font-size: 3rem; }
+  .price-card.popular { transform: none; }
+}
